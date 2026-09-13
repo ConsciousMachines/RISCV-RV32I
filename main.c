@@ -1,7 +1,8 @@
 #define ARR_BASE  0x1000
 #define ARR_COUNT 8
 
-int main(void) {
+int main(void) 
+{
     volatile unsigned int *arr = (unsigned int *)ARR_BASE;
 
     // unsorted data
