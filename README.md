@@ -7,6 +7,19 @@ This is an implementation of a RISC-V core supporting the RV32I instruction set,
 
 Added SystemVerilog implementation (which naturally loses a lot of granularity), and passing the RISCV32I test suite.
 
+# Testing
+The processor was tested using the official [riscv-tests](https://github.com/riscv-software-src/riscv-tests) suite. The suite tests each instruction, and writes the result to the memory mapped I/O address `tohost = 0x80000040`. In the VCB simulator, this address is attached to the hex display. In SystemVerilog, the C++ Verilator testbench `sim_main.cpp` loops the CPU until `tohost` becomes 1, or a timeout occurs.
+
+Run one test, with waveform output:
+```shell
+make run
+```
+Run the whole test suite:
+```shell
+make test
+```
+A failing test would place the failed case number in register `x3`. Then you can step the CPU one clock at a time to watch the state, while reading the test assembly code in another tab. For the VCB simulator I would look at the wires at each step, and for SystemVerilog I would look at whichever signal is wrong and do a root-cause-analysis to find out which of its inputs is wrong until the problem is found.
+
 # Usage
 On Debian (or WSL), we can install the tools to compile our code for the RISC-V RV32I instruction set.
 ```shell
