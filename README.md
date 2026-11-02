@@ -1,7 +1,7 @@
 # RISCV-RV32I
 ![demo](https://github.com/ConsciousMachines/RISCV-RV32I/blob/main/img/output.gif)
 
-This is an implementation of a RISC-V core supporting the RV32I instruction set, made in Virtual Circuit Board. This simulator allows you to build circuits from nothing except gates and wire, allowing you to witness the timing and area properties of your circuit, which usually get abstracted away in Verilog. This allows you to see the result as a living, breathing processor similar to ![Visual 6502](http://www.visual6502.org/JSSim/index.html), and you can see your code execute as binary numbers traveling between parts of the circuit. 
+This is an implementation of a RISC-V core supporting the RV32I instruction set, made in Virtual Circuit Board. This simulator allows you to build circuits from nothing except gates and wire, allowing you to witness the timing and area properties of your circuit, which usually get abstracted away in Verilog. This allows you to see the result as a living, breathing processor similar to [Visual 6502](http://www.visual6502.org/JSSim/index.html), and you can see your code execute as binary numbers traveling between parts of the circuit. 
 
 # Update 11/2/2026
 
