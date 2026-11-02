@@ -3,6 +3,10 @@
 
 This is an implementation of a RISC-V core supporting the RV32I instruction set, made in Virtual Circuit Board. This simulator allows you to build circuits from nothing except gates and wire, allowing you to witness the timing and area properties of your circuit, which usually get abstracted away in Verilog. This allows you to see the result as a living, breathing processor similar to ![Visual 6502](http://www.visual6502.org/JSSim/index.html), and you can see your code execute as binary numbers traveling between parts of the circuit. 
 
+# Update 11/2/2026
+
+Added SystemVerilog implementation (which naturally loses a lot of granularity), and passing the RISCV32I test suite.
+
 # Usage
 On Debian (or WSL), we can install the tools to compile our code for the RISC-V RV32I instruction set.
 ```shell
